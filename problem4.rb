@@ -1,6 +1,11 @@
-sum = 0
-i = 1
+first = 100
+last = 999
 
-while i < 1000
-  
+palindrome = (first..last).map do |i|
+  (i..last).map do |j|
+    i * j
+  end.select{ |n| n.to_s == n.to_s.reverse}
+end.flatten.max
+
+puts palindrome
   
