@@ -7,10 +7,19 @@
 
 var start = new Date().getTime();
 
+var answer = 0;
 
-
-
-
+for (var i = 1; i <= 1000; i ++){
+  for (var j = 1; j<=1000; j++){
+    for (var k = 1; k<= 1000; k++){
+     if ((j * j) + (i * i) === (k * k) && i + j + k === 1000){
+        console.log("i = " + i + " j = " + j + " k = " + k);
+        answer = j * i * k
+        console.log(answer);
+     }
+    }
+  }
+}
 
 var end = new Date().getTime();
 var time = end - start;
